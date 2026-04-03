@@ -1,4 +1,4 @@
-# Arduino Uno SMD - Fade LEED with pot PWM
+# Arduino Uno SMD - Fade LED with pot PWM
 
 ## Fade LED with pot PWM in Arduino Uno SMD with Golang
 
