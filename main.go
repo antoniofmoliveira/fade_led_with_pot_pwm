@@ -12,8 +12,12 @@ func main() {
 	pwm := machine.Timer1 // PB1 and PB2
 	pwm.Configure(machine.PWMConfig{})
 	pwm.SetPeriod(0)
-	pwm.Channel(ledPin)
-	pwm.Set(0, pwm.Top()/4) // D9 = PB1 => channel 0
+
+	ch, err := pwm.Channel(ledPin)
+	if err != nil {
+		panic(err)
+	}
+	pwm.Set(ch, pwm.Top()) // D9 = PB1 => channel 0
 
 	machine.InitADC()
 	potPin := machine.ADC{Pin: machine.ADC5}
@@ -33,7 +37,7 @@ func main() {
 
 		z := float64(v) * r // 0 <= z <= 255
 
-		pwm.Set(0, uint32(z))
+		pwm.Set(ch, uint32(z))
 
 		time.Sleep(time.Millisecond * 500)
 	}
