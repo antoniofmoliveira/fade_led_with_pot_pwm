@@ -1,0 +1,5 @@
+﻿Name,Quantity,Component
+"D3",1,"Green LED"
+"U5",1," Arduino Uno R3"
+"R5",1,"220 Ω Resistor"
+"Rpot1",1,"10 kΩ Potentiometer"

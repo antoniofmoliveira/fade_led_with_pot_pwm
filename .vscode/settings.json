@@ -1,0 +1,11 @@
+{
+  "tinygo.target": "arduino",
+  "go.buildTags": "avr,baremetal,linux,arm,atmega328p,atmega,avr5,arduino",
+  "go.toolsEnvVars": {
+    "GOOS": "linux",
+    "GOARCH": "arm"
+  },
+  "tinygo.port": "/dev/ttyUSB0",
+  "tinygo.serialBaudRate": 9600,
+  "go.goroot": "/home/antonio/.cache/tinygo/goroot-3a5100394add803014db3f725521decf2317038956fb9c028d691cba981341d1"
+}
